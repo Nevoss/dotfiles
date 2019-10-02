@@ -6,6 +6,5 @@ for i in $(ls -pGA1 . | grep -e"^[.]" | grep -v /); do
 	if [ "y" = "$doLink" ]; then
 		echo "$HOME/$i" "$HOME/${i}_old" | xargs -pt mv
 		echo "$DIR/$i" "$HOME/${i}" | xargs -pt ln -s
-
 	fi
 done
